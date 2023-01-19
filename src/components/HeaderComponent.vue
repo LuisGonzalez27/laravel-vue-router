@@ -10,7 +10,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item" v-for="(link, index) in menuLinks" :key="index">
-                            <router-link :to="{name : link.routeName}" class="nav-link">
+                            <router-link :to="{name : link.routeName}" active-class="my-active" class="nav-link">
                                 {{ link.label }}
                             </router-link>
                         </li>
