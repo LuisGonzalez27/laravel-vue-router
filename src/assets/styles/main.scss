@@ -9,3 +9,8 @@ $fa-font-path: '../webfonts';
 .my-active{
     color: black !important;
 }
+
+.pagination {
+    --#{$prefix}pagination-color: #{$pagination-color};
+    --#{$prefix}pagination-bg: #{$pagination-bg};
+}
