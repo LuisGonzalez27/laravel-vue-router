@@ -1,16 +1,12 @@
 <template>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-md navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="navbar-collapse" id="navbar-toggler">
+                    <a class="navbar-brand" href="#"><i class="fa-solid fa-code fa-xl fa-flip" style="--fa-animation-duration: 3s;"></i></a>
+                    <ul class="navbar-nav d-flex justify-content-center align-items-center">
                         <li class="nav-item" v-for="(link, index) in menuLinks" :key="index">
-                            <router-link :to="{name : link.routeName}" active-class="my-active" class="nav-link">
+                            <router-link :to="{ name: link.routeName }" active-class="my-active" class="nav-link">
                                 {{ link.label }}
                             </router-link>
                         </li>
@@ -51,4 +47,14 @@
 
 <style lang="scss" scoped>
 
+.navbar {
+  padding: 2rem;
+  background-color: #f5f6f7;
+  height: 100px;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;  
+}
 </style>

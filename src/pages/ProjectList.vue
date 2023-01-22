@@ -1,7 +1,7 @@
 <template>
-    <section>
-        <h1>Lista dei project</h1>
-        <div class="row">
+    <section class="my-section">
+        <h1 class="pt-3">Lista dei project</h1>
+        <div class="row pt-4">
             <div class="col-12 col-md-3" v-for="(project, index) in projects" :key="project.id">
                 <ProjectCard :project="project" />
             </div>

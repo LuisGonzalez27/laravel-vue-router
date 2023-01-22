@@ -1,21 +1,21 @@
 <template>
-    <section v-if="project">
-        <h1>{{ project.name }}</h1>
+    <section class="container pt-3" v-if="project">
+        <h1>{{ project.title }}</h1>
         
         <img :src="`${store.imagePath}${project.cover_image}`" class="card-img-top" :alt="project.name">
-        <p>{{ project.content }}</p>
-        <div v-if="project.category">
-            <h5>Category: {{ project.category.name }}</h5>
+        <h4>{{ project.content }}</h4>
+        <div v-if="project.type">
+            <h5>Type: {{ project.type.name }}</h5>
         </div>
-        <div v-else="project.category">
-            <h5>Nessuna category</h5>
+        <div v-else="project.type">
+            <h5>Nessun type</h5>
         </div>
 
         <div v-if="project.technologies && project.technologies.length > 0">
-            <h5>Tecnologies</h5>
-            <div>
-                Project singolo
-                <span v-for="(technology, index) in project.technologies" :key="index" class="badge text-bg-info">{{ technology.name }}</span>
+            <div class="my-technology">
+                <span v-for="(technology, index) in project.technologies" :key="index" class="badge text-bg-info">
+                    {{ technology.name }} 
+                </span>
             </div>
         </div>
     </section>
@@ -62,4 +62,10 @@ export default {
 .card-img-top {
     width: 300px;
 }
+.my-technology{
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+}
+
 </style>

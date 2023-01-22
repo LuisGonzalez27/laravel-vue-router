@@ -6,11 +6,49 @@ $fa-font-path: '../webfonts';
 
 @import 'bootstrap/scss/bootstrap';
 
-.my-active{
+@import url('https://fonts.googleapis.com/css2?family=Tourney&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
+
+.my-active {
     color: black !important;
 }
 
-.pagination {
-    --#{$prefix}pagination-color: #{$pagination-color};
-    --#{$prefix}pagination-bg: #{$pagination-bg};
+.my-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Tourney', cursive;
+}
+.section-dark {
+    color: white;
+    background-color: #1b1b32;
+}
+
+.section-title {
+    font-size: 2rem;
+    padding: 15px 0;
+    font-family: 'Geo', sans-serif;
+}
+
+.section-text {
+    font-size: 1.2rem;
+    color: #23CE6B;
+    font-family: 'Geo', sans-serif;
+}
+// Responsive
+@media screen and (max-width: 767px) {
+    .navbar-brand {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .hero-down-img {
+        max-width: 600px;
+    }
 }

@@ -7,7 +7,7 @@
             <!-- <img v-else="project.cover_image" src="https://via.placeholder.com/150"> -->
         </div>
         <div class="card-body">
-            <h5 class="card-title">{{ project.name }}</h5>
+            <h5 class="card-title">{{ project.title }}</h5>
             <p class="card-text">{{ truncateContent }}</p>
             <router-link class="btn btn-primary" :to="{name: 'single-project', params:{ slug: project.slug }}">
                 Vedi il project
